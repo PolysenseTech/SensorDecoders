@@ -1,2 +1,3 @@
-# SensorDecoders
-Sensor decoding project
+# Codecs
+
+Sample Functions for Polysense IoT Device Encoders and ecoders
