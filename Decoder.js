@@ -53,6 +53,7 @@ function polysenseDevicedecode(bytes) {
         "0b": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"ext_mv", remark:"Voltage of ADC Sampling", unit:"mv"},
         "0d": {length: 4, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"ap_pa", remark:"atmosphere pressure", unit:"pa"},
         "0e": {length: 2, isUnsigned: false, factor: 0.1, toFixed: 1, isFloat: false, hasChild: false, key:"ext_temp", remark:"ext_temp", unit:"°C"},
+        "0f": {length: 2, isUnsigned: true,  factor: 0.01,toFixed: 2, isFloat: false, hasChild: false, key:"displacement", remark:"displacement", unit:"mm"},
         "13": {length: 4, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"duty", remark:"Numeric Value (RFID or other counters)", unit:""},
         "14": {length: 1, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: true,  key:"switch", remark:"switch", unit:"", isBit: true, children: [
             {start: 0, length: 7, key:"switch_count", remark:"switch count"},
@@ -83,7 +84,10 @@ function polysenseDevicedecode(bytes) {
         ]},
         "30": {length: 1, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"dir", remark:"Direction", unit:""},
         "31": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"wind", remark:"Wind Speed", unit:"mm/s"},
-        "38": {length: 1, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"state", remark:"IO State", unit:""},
+        "38": {length: 1, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"state", remark:"IO State", unit:"", isBit: true, children: [
+            {start: 0, length: 7, key:"leak_state_count", remark:"leak state counter"},
+            {start: 7, length: 1, key:"leak_state", remark:"leak state"},	
+        ]},
         "3b": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"voc", remark:"VOC", unit:"ug/m³"},
         "3d": {length: 2, isUnsigned: true,  factor: 0.1, toFixed: 1, isFloat: false, hasChild: false, key:"o2", remark:"O₂", unit:"%"},
         "3f": {length: 4, isUnsigned: false, factor: 1,   toFixed: 3, isFloat: true,  hasChild: false, key:"vac", remark:"Voltage", unit:"V"},
@@ -124,7 +128,10 @@ function polysenseDevicedecode(bytes) {
         "69": {length: 2, isUnsigned: true,  factor: 1,    toFixed: 0, isFloat: false, hasChild: false, key:"p", remark:"P (Phosphorus) Index", unit:""},
         "6a": {length: 2, isUnsigned: true,  factor: 1,    toFixed: 0, isFloat: false, hasChild: false, key:"k", remark:"K (Potassium) Index", unit:""},
         "6b": {length: 2, isUnsigned: true,  factor: 1,    toFixed: 0, isFloat: false, hasChild: false, key:"voc", remark:"VOC", unit:"ppb"},
-        "6c": {length: 1, isUnsigned: true,  factor: 1,    toFixed: 0, isFloat: false, hasChild: false, key:"state", remark:"IO State (Generic)", unit:""},
+        "6c": {length: 1, isUnsigned: true,  factor: 1,    toFixed: 0, isFloat: false, hasChild: false, key:"state", remark:"IO State (Generic)", unit:"", isBit: true, children: [
+            {start: 0, length: 7, key:"io_state_count", remark:"IO state counter"},
+            {start: 7, length: 1, key:"io_state", remark:"IO state( Rope-pulling switch and PIR)"},	
+        ]},
         "6d": {length: 4, isUnsigned: false, factor: 0.001, toFixed: 3, isFloat: false, hasChild: false, key:"ohm", remark:"Ohm", unit:"ohm"},
         "6e": {length: 4, isUnsigned: false, factor: 1, 	toFixed: 3, isFloat: false, hasChild: false, key:"flow_speed", remark:"Flow speed", unit:"m³/h"},
         "6f": {length: 1, isUnsigned: false, factor: 1, 	toFixed: 0, isFloat: false, hasChild: false, key:"per", remark:"Percentage (VBAT or others)", unit:"%"},
