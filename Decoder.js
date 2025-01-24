@@ -84,6 +84,7 @@ function polysenseDevicedecode(bytes) {
         ]},
         "30": {length: 1, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"dir", remark:"Direction", unit:""},
         "31": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"wind", remark:"Wind Speed", unit:"mm/s"},
+        "32": {length: 2, isUnsigned: true,  factor: 0.1, toFixed: 1, isFloat: false, hasChild: false, key:"rainfall", remark:"Rainfall", unit:"mm/s"},
         "38": {length: 1, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"state", remark:"IO State", unit:"", isBit: true, children: [
             {start: 0, length: 7, key:"leak_state_count", remark:"leak state counter"},
             {start: 7, length: 1, key:"leak_state", remark:"leak state"},	
