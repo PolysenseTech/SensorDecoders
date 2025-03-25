@@ -1,7 +1,7 @@
 /**
  * Payload Decoder
  *
- * Copyright 2024 Polysense Tech
+ * Copyright 2025 Polysense Tech
  *
  * @product Common
  */
@@ -60,11 +60,22 @@ function polysenseDevicedecode(bytes) {
             {start: 7, length: 1, key:"switch", remark:"switch"},	
         ]},
         "15": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"nh3", remark:"NH₃", unit:"ppb"},
+        "16": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"ash3", remark:"ASH₃", unit:"ppb"},
+        "17": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"c6h6", remark:"C6H6", unit:"ppb"},
+        "18": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"cl2", remark:"CL₂", unit:"ppb"},
+        "19": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"h2", remark:"H₂", unit:"LEL%"},
         "1a": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"h2s", remark:"H₂S", unit:"ppb"},
+        "1b": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"hcl", remark:"HCL", unit:"ppm"},
+        "1c": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"hcn", remark:"HCN", unit:"ppb"},
+        "1d": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"hf", remark:"HF", unit:"ppb"},
         "1e": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"no2", remark:"NO₂", unit:"ug/m³"},
         "1f": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"o3", remark:"O₃", unit:"ug/m³"},
+        "20": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"ph3", remark:"PH₃", unit:"ppb"},
         "21": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"so2", remark:"SO₂", unit:"ug/m³"},
         "22": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"ch4", remark:"ch4", unit:"ppb"},
+        "23": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"c2h2", remark:"C₂H₂", unit:"ppb"},
+        "24": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"gasoline", remark:"Gasoline", unit:"ppm"},
+        "24": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"c2h4o3", remark:"C2H4O3", unit:"ppb"},
         "26": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"distance", remark:"distance", unit:"mm"},
         "28": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"co2", remark:"CO₂", unit:"ppm"},
         "29": {length: 2, isUnsigned: true,  factor: 10,  toFixed: 0, isFloat: false, hasChild: false, key:"current", remark:"Current", unit:"mA"},
@@ -139,6 +150,7 @@ function polysenseDevicedecode(bytes) {
         "70": {length: 4, isUnsigned: false, factor: 0.001, toFixed: 3, isFloat: false, hasChild: false, key:"velocity_volume", remark:"Velocity volume", unit:"m³"},
         "71": {length: 4, isUnsigned: false, factor: 0.001, toFixed: 3, isFloat: false, hasChild: false, key:"r_velocity_volume", remark:"Reversed velocity volum", unit:"m³"},
         "72": {length: 4, isUnsigned: false, factor: 1, 	toFixed: 0, isFloat: false, hasChild: false, key:"muil_format", remark:"Multi sub-type format", unit:""},
+        "73": {length: 4, isUnsigned: false, factor: 0.001, toFixed: 0, isFloat: false, hasChild: false, key:"flow_speed_per_miniute", remark:"Minute based Flow speed", unit:"L/min"},
         "78": {length: -1, isUnsigned: false, factor: 1, 	toFixed: 0, isFloat: false, hasChild: false, key:"ssid_rssi", remark:"SSID+RSSI（Variable Length Payload format）", unit:"", diyLength: "", diyLengthHex:""},
     }
 
