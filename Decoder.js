@@ -75,7 +75,7 @@ function polysenseDevicedecode(bytes) {
         "22": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"ch4", remark:"ch4", unit:"ppb"},
         "23": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"c2h2", remark:"C₂H₂", unit:"ppb"},
         "24": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"gasoline", remark:"Gasoline", unit:"ppm"},
-        "24": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"c2h4o3", remark:"C2H4O3", unit:"ppb"},
+        "25": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"c2h4o3", remark:"C2H4O3", unit:"ppb"},
         "26": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"distance", remark:"distance", unit:"mm"},
         "28": {length: 2, isUnsigned: true,  factor: 1,   toFixed: 0, isFloat: false, hasChild: false, key:"co2", remark:"CO₂", unit:"ppm"},
         "29": {length: 2, isUnsigned: true,  factor: 10,  toFixed: 0, isFloat: false, hasChild: false, key:"current", remark:"Current", unit:"mA"},

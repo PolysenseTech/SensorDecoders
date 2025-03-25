@@ -83,11 +83,18 @@ D77E 070E63 0A000C 2B001C001F0015
 |         duty         | 0x13 | 4 |            | | 
 |        switch        | 0x14 | 1 |            | | 
 |         nh3          | 0x15 | 2 |        ppb | | 
+|         ash3         | 0x16 | 2 |        ppb | | 
+|         c6h6         | 0x17 | 2 |        ppb | | 
+|         cl2          | 0x18 | 2 |        ppb | | 
+|         h2           | 0x19 | 2 |        LEL% | | 
 |         h2s          | 0x1a | 2 |        ppb | | 
 |         no2          | 0x1e | 2 |      ug/m³ | | 
 |          o3          | 0x1f | 2 |      ug/m³ | | 
 |         so2          | 0x21 | 2 |      ug/m³ | | 
 |         ch4          | 0x22 | 2 |        ppb | | 
+|         c2h2         | 0x23 | 2 |        ppb | | 
+|         gasoline     | 0x24 | 2 |        ppm | | 
+|         c2h4o3       | 0x25 | 2 |        ppb | | 
 |       distance       | 0x26 | 2 |         mm | | 
 |         co2          | 0x28 | 2 |        ppm | | 
 |       current        | 0x29 | 2 |         mA | | 
@@ -142,4 +149,5 @@ D77E 070E63 0A000C 2B001C001F0015
 |   velocity_volume    | 0x70 | 4 |         m³ | | 
 |  r_velocity_volume   | 0x71 | 4 |         m³ | | 
 |     muil_format      | 0x72 | 4 |            | | 
+|     muil_format      | 0x73 | 4 |      L/min | | 
 |      ssid_rssi       | 0x78 |   |            | customized sensors| 
